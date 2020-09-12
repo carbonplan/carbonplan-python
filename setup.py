@@ -20,8 +20,8 @@ CLASSIFIERS = [
     'Intended Audience :: Science/Research',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
     'Topic :: Scientific/Engineering',
 ]
 
@@ -29,7 +29,8 @@ setup(
     name='carbonplan',
     description='CarbonPlan metapackage',
     long_description=long_description,
-    python_requires='>=3.6',
+    long_description_content_type='text/markdown',
+    python_requires='>=3.7',
     maintainer='Joe Hamman',
     maintainer_email='joe@carbonplan.org',
     url='https://github.com/carbonplan/carbonplan-python',
