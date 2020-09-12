@@ -43,6 +43,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=('tests',)),
     install_requires=install_requires,
+    extras_require=extras_require,
     classifiers=CLASSIFIERS,
     use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'dirty-tag'},
     setup_requires=['setuptools_scm', 'setuptools>=30.3.0'],
