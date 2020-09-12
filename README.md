@@ -5,7 +5,7 @@
 
 # carbonplan / carbonplan-python
 
-**metapackage for python utilities and subprojects**
+**namespace package for python utilities and subprojects**
 
 [![GitHub][github-badge]][github]
 ![Build Status][]
@@ -16,15 +16,26 @@
 [build status]: https://flat.badgen.net/github/checks/carbonplan/carbonplan-python
 [mit license]: https://flat.badgen.net/badge/license/MIT/blue
 
+This repository includes the `carbonplan` namespace Python package. The package itself includes very little of substance, and is distributed to act as the top-level namespace for other Python packages developed by CarbonPlan. Other packages include:
+
+| Package           | Import                     | GitHub Repo                                                                  |
+| ----------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| carbonplan-data   | `import carbonplan.data`   | [https://github.com/carbonplan/data](https://github.com/carbonplan/data)     |
+| carbonplan-styles | `import carbonplan.styles` | [https://github.com/carbonplan/styles](https://github.com/carbonplan/styles) |
+
 ## install
 
 ```shell
-pip install carbonplan
+pip install carbonplan[styles,data]
 ```
 
 ## usage
 
-Coming soon.
+```python
+from carbonplan.styles.mpl import dark
+# this is the same things as
+from carbonplan_styles.mpl import dark
+```
 
 ## license
 

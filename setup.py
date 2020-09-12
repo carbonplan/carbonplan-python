@@ -25,9 +25,15 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering',
 ]
 
+extras_require = {
+    'data': ['carbonplan-data'],
+    'styles': ['carbonplan-styles'],
+    # 'forests': ['carbonplan-forests'],
+}
+
 setup(
     name='carbonplan',
-    description='CarbonPlan metapackage',
+    description='CarbonPlan namespace package',
     long_description=long_description,
     long_description_content_type='text/markdown',
     python_requires='>=3.7',
@@ -36,7 +42,6 @@ setup(
     url='https://github.com/carbonplan/carbonplan-python',
     license='MIT',
     packages=find_packages(exclude=('tests',)),
-    package_dir={'carbonplan': 'carbonplan'},
     install_requires=install_requires,
     classifiers=CLASSIFIERS,
     use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'dirty-tag'},
