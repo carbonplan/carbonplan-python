@@ -2,10 +2,6 @@ import os
 
 from setuptools import find_packages, setup
 
-with open('requirements.txt') as f:
-    install_requires = f.read().strip().split('\n')
-
-
 if os.path.exists('README.md'):
     with open('README.md') as f:
         long_description = f.read()
@@ -28,7 +24,7 @@ CLASSIFIERS = [
 extras_require = {
     'data': ['carbonplan-data'],
     'styles': ['carbonplan-styles'],
-    # 'forests': ['carbonplan-forests'],
+    'forests': ['carbonplan-forests'],
 }
 
 setup(
@@ -42,7 +38,6 @@ setup(
     url='https://github.com/carbonplan/carbonplan-python',
     license='MIT',
     packages=find_packages(exclude=('tests',)),
-    install_requires=install_requires,
     extras_require=extras_require,
     classifiers=CLASSIFIERS,
     use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'dirty-tag'},
