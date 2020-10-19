@@ -18,23 +18,24 @@
 
 This repository includes the `carbonplan` namespace Python package. The package itself includes very little of substance, and is distributed to act as the top-level namespace for other Python packages developed by CarbonPlan. Other packages include:
 
-| Package           | Import                     | GitHub Repo                                                                  |
-| ----------------- | -------------------------- | ---------------------------------------------------------------------------- |
-| carbonplan-data   | `import carbonplan.data`   | [https://github.com/carbonplan/data](https://github.com/carbonplan/data)     |
-| carbonplan-styles | `import carbonplan.styles` | [https://github.com/carbonplan/styles](https://github.com/carbonplan/styles) |
+| Package            | Import                      | GitHub Repo                                                                    |
+| ------------------ | --------------------------- | ------------------------------------------------------------------------------ |
+| carbonplan-data    | `import carbonplan.data`    | [https://github.com/carbonplan/data](https://github.com/carbonplan/data)       |
+| carbonplan-styles  | `import carbonplan.styles`  | [https://github.com/carbonplan/styles](https://github.com/carbonplan/styles)   |
+| carbonplan-forests | `import carbonplan.forests` | [https://github.com/carbonplan/forests](https://github.com/carbonplan/forests) |
 
 ## install
 
 ```shell
-pip install carbonplan[styles,data]
+pip install carbonplan[styles,data,forests]
 ```
 
 ## usage
 
 ```python
-from carbonplan.styles.mpl import dark
+from carbonplan.styles.mpl import set_theme
 # this is the same things as
-from carbonplan_styles.mpl import dark
+from carbonplan_styles.mpl import set_theme
 ```
 
 ## license
