@@ -1,6 +1,10 @@
 import importlib
 
+import pytest
 
-def test_import():
-    module = importlib.import_module('carbonplan')
-    assert module
+
+@pytest.mark.parametrize(
+    'mod', ['carbonplan', 'carbonplan.data', 'carbonplan.forests', 'carbonplan.styles']
+)
+def test_import_submodules(mod):
+    assert importlib.import_module(mod)

@@ -1,1 +1,4 @@
 pytest
+git+git://github.com/carbonplan/data
+git+git://github.com/carbonplan/styles
+git+git://github.com/carbonplan/forests
