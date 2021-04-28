@@ -8,13 +8,12 @@
 **namespace package for python utilities and subprojects**
 
 [![GitHub][github-badge]][github]
-![Build Status][]
+[![CI](https://github.com/carbonplan/carbonplan-python/actions/workflows/main.yaml/badge.svg)](https://github.com/carbonplan/carbonplan-python/actions/workflows/main.yaml)
 ![MIT License][]
 
 [github]: https://github.com/carbonplan/carbonplan-python
-[github-badge]: https://flat.badgen.net/badge/-/github?icon=github&label
-[build status]: https://flat.badgen.net/github/checks/carbonplan/carbonplan-python
-[mit license]: https://flat.badgen.net/badge/license/MIT/blue
+[github-badge]: https://badgen.net/badge/-/github?icon=github&label
+[mit license]: https://badgen.net/badge/license/MIT/blue
 
 This repository includes the `carbonplan` namespace Python package. The package itself includes very little of substance, and is distributed to act as the top-level namespace for other Python packages developed by CarbonPlan. Other packages include:
 
