@@ -8,8 +8,6 @@ import pytest
     [
         'carbonplan',
         'carbonplan.data',
-        'carbonplan.forest_offsets',
-        'carbonplan.forest_risks',
         'carbonplan.styles',
     ],
 )
