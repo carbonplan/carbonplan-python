@@ -7,26 +7,28 @@
 
 **namespace package for python utilities and subprojects**
 
-[![GitHub][github-badge]][github]
 [![CI](https://github.com/carbonplan/carbonplan-python/actions/workflows/main.yaml/badge.svg)](https://github.com/carbonplan/carbonplan-python/actions/workflows/main.yaml)
 ![MIT License][]
+[![PyPI version](https://badge.fury.io/py/carbonplan.svg)](https://badge.fury.io/py/carbonplan)
 
-[github]: https://github.com/carbonplan/carbonplan-python
 [github-badge]: https://badgen.net/badge/-/github?icon=github&label
 [mit license]: https://badgen.net/badge/license/MIT/blue
 
 This repository includes the `carbonplan` namespace Python package. The package itself includes very little of substance, and is distributed to act as the top-level namespace for other Python packages developed by CarbonPlan. Other packages include:
 
-| Package            | Import                      | GitHub Repo                                                                    |
-| ------------------ | --------------------------- | ------------------------------------------------------------------------------ |
-| carbonplan-data    | `import carbonplan.data`    | [https://github.com/carbonplan/data](https://github.com/carbonplan/data)       |
-| carbonplan-styles  | `import carbonplan.styles`  | [https://github.com/carbonplan/styles](https://github.com/carbonplan/styles)   |
-| carbonplan-forests | `import carbonplan.forests` | [https://github.com/carbonplan/forests](https://github.com/carbonplan/forests) |
+| Package                   | Import                             | GitHub Repo                                                                                  |
+| ------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| carbonplan-data           | `import carbonplan.data`           | [https://github.com/carbonplan/data](https://github.com/carbonplan/data)                     |
+| carbonplan-forest-offsets | `import carbonplan.forest_offsets` | [https://github.com/carbonplan/forest-offsets](https://github.com/carbonplan/forest-offsets) |
+| carbonplan-forest-risks   | `import carbonplan.forest_risks`   | [https://github.com/carbonplan/forest-risks](https://github.com/carbonplan/forest-risks)     |
+| carbonplan-styles         | `import carbonplan.styles`         | [https://github.com/carbonplan/styles](https://github.com/carbonplan/styles)                 |
 
 ## install
 
 ```shell
-pip install carbonplan[styles,data,forests]
+pip install carbonplan[all]
+# or individual sub packages
+pip install carbonplan[styles]
 ```
 
 ## usage

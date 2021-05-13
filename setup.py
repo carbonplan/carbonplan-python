@@ -22,9 +22,11 @@ CLASSIFIERS = [
 ]
 
 extras_require = {
+    'all': ['carbonplan-data', 'carbonplan-styles', 'carbonplan-forest-risks'],
     'data': ['carbonplan-data'],
+    'forest-offsets': ['carbonplan-forest-offsets'],
+    'forest-risks': ['carbonplan-forest-risks'],
     'styles': ['carbonplan-styles'],
-    'forests': ['carbonplan-forests'],
 }
 
 setup(
