@@ -1,4 +1,5 @@
 pytest
 carbonplan-data
+carbonplan-forests-offsets
+carbonplan-forests-risks
 carbonplan-styles
-carbonplan-forests
