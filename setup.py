@@ -42,6 +42,6 @@ setup(
     packages=find_packages(exclude=('tests',)),
     extras_require=extras_require,
     classifiers=CLASSIFIERS,
-    use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'dirty-tag'},
-    setup_requires=['setuptools_scm', 'setuptools>=30.3.0'],
+    use_scm_version={"version_scheme": "post-release", "local_scheme": "node-and-timestamp"},
+    setup_requires=["setuptools_scm", "setuptools>=30.3.0", "setuptools_scm_git_archive"],
 )
