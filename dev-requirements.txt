@@ -1,5 +1,3 @@
 pytest
-# temp fix for carbonplan-data
-intake
 carbonplan-data
 carbonplan-styles

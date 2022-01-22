@@ -2,6 +2,9 @@ import os
 
 from setuptools import find_packages, setup
 
+with open('requirements.txt') as f:
+    install_requires = f.read().strip().split('\n')
+
 if os.path.exists('README.md'):
     with open('README.md') as f:
         long_description = f.read()
@@ -16,8 +19,8 @@ CLASSIFIERS = [
     'Intended Audience :: Science/Research',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
     'Topic :: Scientific/Engineering',
 ]
 
@@ -34,12 +37,13 @@ setup(
     description='CarbonPlan namespace package',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    python_requires='>=3.7',
+    python_requires='>=3.8',
     maintainer='Joe Hamman',
     maintainer_email='joe@carbonplan.org',
     url='https://github.com/carbonplan/carbonplan-python',
     license='MIT',
     packages=find_packages(exclude=('tests',)),
+    install_requires=install_requires,
     extras_require=extras_require,
     classifiers=CLASSIFIERS,
     use_scm_version={"version_scheme": "post-release", "local_scheme": "node-and-timestamp"},
