@@ -1,4 +1,5 @@
 import os
+import pathlib
 
 from setuptools import find_packages, setup
 
@@ -6,8 +7,7 @@ with open('requirements.txt') as f:
     install_requires = f.read().strip().split('\n')
 
 if os.path.exists('README.md'):
-    with open('README.md') as f:
-        long_description = f.read()
+    long_description = pathlib.Path('README.md').read_text()
 else:
     long_description = ''
 
@@ -46,6 +46,5 @@ setup(
     install_requires=install_requires,
     extras_require=extras_require,
     classifiers=CLASSIFIERS,
-    use_scm_version={"version_scheme": "post-release", "local_scheme": "node-and-timestamp"},
-    setup_requires=["setuptools_scm", "setuptools>=30.3.0", "setuptools_scm_git_archive"],
+    use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'node-and-timestamp'},
 )
