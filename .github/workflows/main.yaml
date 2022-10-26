@@ -2,24 +2,21 @@ name: CI
 
 on:
   push:
-    branches: "*"
+    branches:
+      - main
   pull_request:
-    branches: "*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: actions/setup-python@v2.3.0
-      - uses: pre-commit/action@v2.0.3
-
   test:
     name: ${{ matrix.python-version }}-build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8, 3.9]
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Setup Python
