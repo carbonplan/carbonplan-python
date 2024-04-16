@@ -102,7 +102,3 @@ max-complexity = 18
 
 [tool.ruff.isort]
 known-first-party = ["carbonplan"]
-
-[tool.pytest.ini_options]
-console_output_style = "count"
-addopts = "--cov=./ --cov-report=xml --verbose"
