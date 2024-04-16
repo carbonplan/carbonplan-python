@@ -2,40 +2,46 @@ name: CI
 
 on:
   push:
-    branches: "*"
+    branches:
+      - main
   pull_request:
-    branches: "*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: actions/setup-python@v2.3.0
-      - uses: pre-commit/action@v2.0.3
-
   test:
     name: ${{ matrix.python-version }}-build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     strategy:
+      fail-fast: false
       matrix:
-        python-version: [3.7]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v2.4.0
-      - name: Setup Python
-        uses: actions/setup-python@v2.3.0
+      - uses: actions/checkout@v4
+      - name: Install Conda environment from environment.yml
+        uses: mamba-org/setup-micromamba@v1
         with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
-      - uses: actions/cache@v2.1.7
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - run: |
-          python -m pip install -r dev-requirements.txt
-          python -m pip list
-      - name: Running Tests
+          environment-name: carbonplan
+          condarc: |
+            channels:
+              - conda-forge
+              - nodefaults
+          cache-downloads: false
+          cache-environment: true
+          create-args: >-
+            python=${{ matrix.python-version }}
+      - name: Install package
+        run: |
+          python -m pip install -e .[dev]
+      - name: Conda list information
+        run: |
+          conda env list
+          conda list
+      - name: Run tests
         run: |
           python -m pytest --verbose

@@ -4,11 +4,11 @@ import pytest
 
 
 @pytest.mark.parametrize(
-    'mod',
+    "mod",
     [
-        'carbonplan',
-        'carbonplan.data',
-        'carbonplan.styles',
+        "carbonplan",
+        "carbonplan.data",
+        "carbonplan.styles",
     ],
 )
 def test_import_submodules(mod):

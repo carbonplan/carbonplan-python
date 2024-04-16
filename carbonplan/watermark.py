@@ -9,7 +9,7 @@ def watermark(
     machine=True,
     githash=True,
     iversions=True,
-    **kwargs
+    **kwargs,
 ):
     info = _watermark(
         updated=updated,
@@ -19,7 +19,7 @@ def watermark(
         githash=githash,
         iversions=iversions,
         globals_=globals(),
-        **kwargs
+        **kwargs,
     )
 
     if print_info:
