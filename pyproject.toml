@@ -30,7 +30,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "carbonplan-data", "carbonplan-styles"]
-all = ["carbonplan-data", "carbonplan-styles"]
+all = ["carbonplan-data", "carbonplan-styles", "carbonplan-forest-offsets", "carbonplan-forest-risks"]
 data = ["carbonplan-data"]
 styles = ["carbonplan-styles"]
 forest-offsets = ["carbonplan-forest-offsets"]
