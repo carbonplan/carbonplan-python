@@ -36,6 +36,7 @@ pip install carbonplan[styles]
 
 ```python
 from carbonplan.styles.mpl import set_theme
+
 # this is the same things as
 from carbonplan_styles.mpl import set_theme
 ```
